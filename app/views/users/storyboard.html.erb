@@ -1,0 +1,15 @@
+<% @stories.each do |story| %>
+  <div class = "story">
+    <p id = "title"> <%= story.title %> </p>
+    <h7 id = "tag"> <%story.categories.each do |tags| %>
+      <div class = "tagTitle">
+        <%= tags.tag %>
+        <!-- <% if tags.tag == 'Copy'%>
+          <img src = "/images/lol.png"> </img>
+          <% end %> -->
+      </div>
+      <% end %>
+    <h6 id = "username"> <%= story.user.username %> </h6> <br>
+
+  </div>
+<% end %>

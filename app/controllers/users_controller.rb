@@ -6,4 +6,9 @@ class UsersController < ApplicationController
   def login
   end
 
+  def storyboard
+    @stories = Status.all
+  end
+
+
 end

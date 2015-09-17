@@ -12,6 +12,8 @@ gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 
 #Added
+gem 'bcrypt'
+gem 'hirb'
 gem 'seedbank'
 
 group :development, :test do

@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
     get '/signup' => 'users#new'
     get '/login'  => 'users#login'
-    get '/about'  => 'users#about'
+    get '/storyboard'  => 'users#storyboard'
 
 end
