@@ -1,15 +1,18 @@
-<% @stories.each do |story| %>
-  <div class = "story">
-    <p id = "title"> <%= story.title %> </p>
-    <h7 id = "tag"> <%story.categories.each do |tags| %>
-      <div class = "tagTitle">
-        <%= tags.tag %>
-        <!-- <% if tags.tag == 'Copy'%>
-          <img src = "/images/lol.png"> </img>
-          <% end %> -->
-      </div>
-      <% end %>
-    <h6 id = "username"> <%= story.user.username %> </h6> <br>
 
+<% @stories.each do |story| %>
+<div class = "story">
+  <p id = "title"> <%= story.title %> </p>
+  <h7 id = "tag"> <%story.categories.each do |tags| %> </h7>
+  <div class = "tagTitle">
+    <%= tags.tag %>
   </div>
+  <% end %>
+  <h6 id = "username"> <%= story.user.username %> </h6> <br>
+
+  <h7 id = "comment"> <%story.comments.each do |comment| %> </h7>
+  <%=comment.comment %>
+  <% end %>
+</div>
+
+</div>
 <% end %>

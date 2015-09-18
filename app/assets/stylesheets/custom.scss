@@ -32,8 +32,8 @@ img{
   padding: 20px;
 }
 
-#tag{
-  color: red;
+#tagTitle{
+
   font-style: italic;
 }
 
@@ -46,4 +46,8 @@ img{
   font-weight: bolder;
   font-family: fantasy;
   display: inline-block;
+  color: red;
+}
+#comment{
+  margin-left: 60px;
 }
