@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 
 
   def require_login
-      redirect_to '/users/new' if session[:user_id] == nil
+      redirect_to '/signup' if session[:user_id] == nil
     end
 
   protect_from_forgery with: :exception

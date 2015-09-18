@@ -1,18 +1,33 @@
 
+
+
+
+<div id = "newStatus">
+  <h6> Share your story </h6>
+  <input type = "text" size= "160" > <br>
+  <input type = "submit" value = "LOL">
+  <input type = "submit" value = "WTF">
+  <input type = "submit" value = "HOT">
+  <input type = "submit" value = "FML">
+  <input type = "submit" value = "WOW">
+
+  <input type = "submit">
+</div>
+
 <% @stories.each do |story| %>
 <div class = "story">
   <p id = "title"> <%= story.title %> </p>
   <h7 id = "tag"> <%story.categories.each do |tags| %> </h7>
   <div class = "tagTitle">
-    <%= tags.tag %>
+      <%= tags.tag %>
+    </div>
+    <% end %>
+    <h6 id = "username"> <%= story.user.username %> </h6> <br>
+
+    <div id = "comment"> <%story.comments.each do |comment| %>
+      <%=comment.comment %> <br>
+      <% end %>
+    </div>
   </div>
-  <% end %>
-  <h6 id = "username"> <%= story.user.username %> </h6> <br>
-
-  <h7 id = "comment"> <%story.comments.each do |comment| %> </h7>
-  <%=comment.comment %>
-  <% end %>
-</div>
-
 </div>
 <% end %>
