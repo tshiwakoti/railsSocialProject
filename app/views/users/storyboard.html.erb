@@ -1,16 +1,19 @@
 
+<script>
 
+document.getElementById("button").style.backgroundColor = "green";
+
+</script>
 
 
 <div id = "newStatus">
   <h6> Share your story </h6>
   <input type = "text" size= "160" > <br>
-  <input type = "submit" value = "LOL">
-  <input type = "submit" value = "WTF">
-  <input type = "submit" value = "HOT">
-  <input type = "submit" value = "FML">
-  <input type = "submit" value = "WOW">
-
+    <button  id = "button"> LOL </button>
+    <button onclick="toggleClicked(this)"> WTF </button>
+    <button onclick="toggleClicked(this)"> HOT </button>
+    <button onclick="toggleClicked(this)"> FML </button>
+    <button onclick="toggleClicked(this)"> WOW </button>
   <input type = "submit">
 </div>
 
@@ -27,6 +30,10 @@
     <div id = "comment"> <%story.comments.each do |comment| %>
       <%=comment.comment %> <br>
       <% end %>
+    </div>
+    <div id = "newComment">
+      <input type = "text" size = "140"> <br>
+      <input type = "submit">
     </div>
   </div>
 </div>
